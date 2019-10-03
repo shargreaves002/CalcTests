@@ -29,16 +29,16 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         int x = 2, y = 3;
         int expected = 6;
-        long actual = (long) calc.multiply(x ,y);
-        Assert.assertEquals(expected, actual);
+        double actual = calc.multiply(x ,y);
+        Assert.assertEquals(expected, actual, 0);
     }
 
     @Test
     public void divideTest(){
         Calculator calc = new Calculator();
         int x = 10, y = 2, expected = x / y;
-        long actual = (long) calc.divide(x, y);
-        Assert.assertEquals(expected, actual);
+        double actual = calc.divide(x, y);
+        Assert.assertEquals(expected, actual, 0);
     }
 
     @Test
@@ -54,26 +54,26 @@ public class CalculatorTest {
     public void squareRootTest(){
         Calculator calc = new Calculator();
         double x = 25;
-        long expected = 5;
-        long actual = (long) calc.squareRoot(x);
-        Assert.assertEquals(expected, actual);
+        double expected = 5;
+        double actual = calc.squareRoot(x);
+        Assert.assertEquals(expected, actual, 0);
     }
 
     @Test
     public void exponentsTest(){
         Calculator calc = new Calculator();
         int x = 5, y = 3;
-        long expected = 125;
-        long actual = (long) calc.exponents(x, y);
-        Assert.assertEquals(expected, actual);
+        double expected = 125;
+        double actual = calc.exponents(x, y);
+        Assert.assertEquals(expected, actual, 0);
     }
 
     @Test
     public void sineMethodTest(){
         Calculator calc = new Calculator();
         double x = 10;
-        long expected = (long) Math.sin(x);
-        long actual = (long) calc.sineMethod(x);
-        Assert.assertEquals(expected, actual);
+        double expected = Math.sin(x);
+        double actual = calc.sineMethod(x);
+        Assert.assertEquals(expected, actual, 0);
     }
 }
